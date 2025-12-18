@@ -60,12 +60,13 @@ jobs:
         id: deploy-to-webapp
         uses: azure/webapps-deploy@v2
         with:
-          app-name: "kl-frankj-test-NRfront-app-01"
+          app-name: "klfrankjMulteerFEtest01app"
           package: ${{ env.AZURE_WEBAPP_PACKAGE_PATH }}
 
       - name: logout
         run: |
           az logout
+
 
 
 
