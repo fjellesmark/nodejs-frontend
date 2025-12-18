@@ -10,7 +10,8 @@ env:
   AZURE_WEBAPP_NAME: 'klfrankjMulteerFEtest01app'  # set this to your application's name
   NODE_VERSION: '24.x'                # set this to the node version to use
   AZURE_WEBAPP_PACKAGE_PATH: '.'      # set this to the path to your web app project, defaults to the repository root
-
+  AZURE_WEBAPP_SLOT_NAME: stage
+  
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -66,6 +67,7 @@ jobs:
       - name: logout
         run: |
           az logout
+
 
 
 
