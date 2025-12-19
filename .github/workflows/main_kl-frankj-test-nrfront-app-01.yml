@@ -7,6 +7,7 @@ on:
   workflow_dispatch:
 
 env:
+  PORT: 3000
   AZURE_WEBAPP_NAME: 'klfrankjMulteerFEtest01app'  # set this to your application's name
   NODE_VERSION: '24.x'                # set this to the node version to use
   AZURE_WEBAPP_PACKAGE_PATH: '.'      # set this to the path to your web app project, defaults to the repository root
@@ -71,6 +72,7 @@ jobs:
       - name: logout
         run: |
           az logout
+
 
 
 
