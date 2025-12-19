@@ -1,3 +1,5 @@
+require('newrelic');
+
 const express = require('express');
 const got = require('got');
 const cheerio = require('cheerio');
