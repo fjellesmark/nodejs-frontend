@@ -11,16 +11,20 @@ env:
   NODE_VERSION: '24.x'                # set this to the node version to use
   AZURE_WEBAPP_PACKAGE_PATH: '.'      # set this to the path to your web app project, defaults to the repository root
   AZURE_WEBAPP_SLOT_NAME: stage
+  NEW_RELIC_APP_NAME: ${{ secrets.NEW_RELIC_APP_NAME }}
+  NEW_RELIC_LICENSE_KEY: ${{ secrets.NEW_RELIC_LICENSE_KEY }}
+  NEW_RELIC_LOG_LEVEL: info
+
   
 jobs:
   build:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v4
 
       - name: Set up Node.js version
-        uses: actions/setup-node@v1
+        uses: actions/setup-node@v4
         with:
           node-version: ${{ env.NODE_VERSION }}
 
@@ -67,6 +71,7 @@ jobs:
       - name: logout
         run: |
           az logout
+
 
 
 
