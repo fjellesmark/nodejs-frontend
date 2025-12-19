@@ -7,7 +7,7 @@
  */
 exports.config = {
   app_name: [process.env.NEW_RELIC_APP_NAME || 'MultiTeerFrontEnd'],
-  license_key: process.env.NEW_RELIC_LICENSE_KEY, // do NOT hardcode
+  license_key: process.env.NEW_RELIC_LICENSE_KEY || 'u01xx25097d321270aa1fdc5e6c5734FFFFNRAL', // do NOT hardcode
   distributed_tracing: {
     enabled: true
   },
@@ -25,3 +25,4 @@ exports.config = {
   // },
 };
 ``
+
